@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>StockFlow Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>StockFlow Dashboard</h1>
+    <p>Smart Inventory Management System</p>
+
+    <button onclick="addProduct()">Add Product</button>
+    <div class="dashboard-cards">
+
+    <div class="card">
+        <h3>Total Products</h3>
+        <p id="totalProducts">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Total Stock</h3>
+        <p id="totalStock">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Low Stock</h3>
+        <p id="lowStock">0</p>
+    </div>
+
+</div>
+
+    <h2>Product List</h2>
+    <input
+    type="text"
+    id="searchInput"
+    placeholder="Search Product..."
+    onkeyup="searchProduct()"
+>
+
+    <table border="1" align="center" cellpadding="10">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody id="productList">
+    </tbody>
+</table>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
